@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  text-align: center;
+}
+.container {
+  margin: 10%;
+  display: block;
+  position: relative;
+}
+.container::after {
+  content: "";
+  background: grey;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  height: 100%;
+  width: 2px;
+  transition: all 0.5s ease;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col-1 {
+  align-content: center;
+  justify-content: center;
+  padding: 3rem;
+  min-width: 100px;
+}
+.col-2 {
+  display: flex;
+  width: max-content;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.Range {
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+}
+.Range::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  top: 40%;
+  left: 70%;
+  height: 2px;
+  background: grey;
+  transition: all 0.5s ease;
+}
+.characters {
+  display: flex;
+  min-width: 200px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  border-radius: 15px;
+}
+.left {
+  padding: 10px 5px 0 30px;
+  display: flex;
+}
+.left::after {
+  content: "";
+  width: 1px;
+  height: 100px;
+  position: relative;
+  top: 0;
+  left: 5px;
+  margin-right: 5px;
+  background: gray;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.right {
+  display: flex;
+  text-align: left;
+  font-size: 15px;
+  flex-direction: column;
+}
+.right:first-child {
+  margin-top: 10px;
+}
+.A {
+  color: red;
+}
+.B {
+  color: green;
+}
+.C {
+  color: blueviolet;
+}
+#A::after {
+  content: "";
+  width: 30px; /* Ancho del círculo */
+  height: 30px; /* Altura del círculo (igual que el ancho para que sea un círculo) */
+  background-color: red; /* Color del círculo */
+  position: absolute;
+  top: 0;
+  right: -80%; /* Centra el círculo horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado horizontal */
+  border-radius: 50%; /* Hace el div redondo (círculo) */
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+#B::after {
+  content: "";
+  width: 30px; /* Ancho del círculo */
+  height: 30px; /* Altura del círculo (igual que el ancho para que sea un círculo) */
+  background-color: green; /* Color del círculo */
+  position: absolute;
+  top: 0;
+  right: -80%; /* Centra el círculo horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado horizontal */
+  border-radius: 50%; /* Hace el div redondo (círculo) */
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+#C::after {
+  content: "";
+  width: 30px; /* Ancho del círculo */
+  height: 30px; /* Altura del círculo (igual que el ancho para que sea un círculo) */
+  background-color: blueviolet; /* Color del círculo */
+  position: absolute;
+  top: 0;
+  right: -80%; /* Centra el círculo horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado horizontal */
+  border-radius: 50%; /* Hace el div redondo (círculo) */
+  z-index: 2;
+  transition: all 0.5s ease;
+}
